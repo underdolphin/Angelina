@@ -12,6 +12,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
+using Angelina.Lib.FileIO.Reader;
 using System;
 
 namespace Angelina
@@ -21,6 +22,11 @@ namespace Angelina
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Please input bms path");
+            var getPath = Console.ReadLine();
+            var reader = new BmsReader();
+            var metaInfo = reader.MetaInfoRead(getPath);
+            Console.WriteLine(metaInfo.Artist);
         }
     }
 }

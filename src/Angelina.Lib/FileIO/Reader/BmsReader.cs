@@ -50,7 +50,7 @@ namespace Angelina.Lib.FileIO.Reader
                 for (int i = 1; i < separateCommandString.Length; i++)
                 {
 #pragma warning disable S1643 // Strings should not be concatenated using '+' in a loop
-                    commandValue = commandValue + separateCommandString[i];
+                    commandValue += separateCommandString[i];
 #pragma warning restore S1643 // Strings should not be concatenated using '+' in a loop
                 }
                 return (commandKind.ToUpper(), commandValue, 0, 0);
