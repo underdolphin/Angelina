@@ -71,6 +71,11 @@
             </Controls:HamburgerMenu.ContentTemplate>
             <Controls:HamburgerMenu.ItemsSource>
                 <Controls:HamburgerMenuItemCollection>
+                    <Controls:HamburgerMenuIconItem Icon="{iconPacks:Material Kind=Home}" Label="Home">
+                        <Controls:HamburgerMenuIconItem.Tag>
+                            <local:HomeView></local:HomeView>
+                        </Controls:HamburgerMenuIconItem.Tag>
+                    </Controls:HamburgerMenuIconItem>
                     <Controls:HamburgerMenuIconItem Icon="{iconPacks:Material Kind=ViewStream}" Label="Video graphic">
                         <Controls:HamburgerMenuIconItem.Tag>
                             <local:VideoSettingView></local:VideoSettingView>
@@ -78,12 +83,12 @@
                     </Controls:HamburgerMenuIconItem>
                     <Controls:HamburgerMenuIconItem Icon="{iconPacks:Material Kind=Music}" Label="Audio">
                         <Controls:HamburgerMenuIconItem.Tag>
-                            <local:VideoSettingView></local:VideoSettingView>
+                            <local:AudioSettingView></local:AudioSettingView>
                         </Controls:HamburgerMenuIconItem.Tag>
                     </Controls:HamburgerMenuIconItem>
                     <Controls:HamburgerMenuIconItem Icon="{iconPacks:Material Kind=File}" Label="Resources">
                         <Controls:HamburgerMenuIconItem.Tag>
-                            <local:VideoSettingView></local:VideoSettingView>
+                            <local:ResourcesSettingView></local:ResourcesSettingView>
                         </Controls:HamburgerMenuIconItem.Tag>
                     </Controls:HamburgerMenuIconItem>
                     <Controls:HamburgerMenuIconItem Icon="{iconPacks:Material Kind=Web}" Label="Internet Ranking">
