@@ -14,19 +14,27 @@
 */
 using Angelina.Lib.FileIO.Reader;
 using System;
+using static DxLibDLL.DX;
 
 namespace Angelina
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Entry()
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Please input bms path");
-            var getPath = Console.ReadLine();
-            var reader = new BmsReader();
-            var metaInfo = reader.MetaInfoRead(getPath);
-            Console.WriteLine(metaInfo.Artist);
+            ChangeWindowMode(TRUE);
+            if (DxLib_Init() == -1)
+            {
+                return;
+            }
+            while (ProcessMessage() == 0)
+            {
+                if (CheckHitKey(KEY_INPUT_ESCAPE) == 1)
+                {
+                    break;
+                }
+            }
+            DxLib_End();
         }
     }
 }
