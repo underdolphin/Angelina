@@ -171,11 +171,11 @@
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Angelina.Lib\Angelina.Lib.csproj">
+    <ProjectReference Include="..\Angelina.Lib\Angelina.Lib.csproj">
       <Project>{6156f866-a745-4723-9ca4-f99a876cf692}</Project>
       <Name>Angelina.Lib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\Angelina\Angelina.csproj">
+    <ProjectReference Include="..\Angelina\Angelina.csproj">
       <Project>{bd5dc99e-4135-4acc-95e6-7852c3835bc7}</Project>
       <Name>Angelina</Name>
     </ProjectReference>

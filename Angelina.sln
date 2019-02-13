@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angelina", "src\Angelina\An
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angelina.Lib", "src\Angelina.Lib\Angelina.Lib.csproj", "{6156F866-A745-4723-9CA4-F99A876CF692}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angelina.Settings", "Angelina.Settings\Angelina.Settings.csproj", "{88C71DA1-E553-4107-B80F-11E6A0E802F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angelina.Settings", "src\Angelina.Settings\Angelina.Settings.csproj", "{88C71DA1-E553-4107-B80F-11E6A0E802F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
