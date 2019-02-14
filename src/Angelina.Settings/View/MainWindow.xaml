@@ -88,7 +88,7 @@
                     </Controls:HamburgerMenuIconItem>
                     <Controls:HamburgerMenuIconItem Icon="{iconPacks:Material Kind=File}" Label="Resources">
                         <Controls:HamburgerMenuIconItem.Tag>
-                            <local:ResourcesSettingView></local:ResourcesSettingView>
+                            <local:ResourcesSettingsView></local:ResourcesSettingsView>
                         </Controls:HamburgerMenuIconItem.Tag>
                     </Controls:HamburgerMenuIconItem>
                     <Controls:HamburgerMenuIconItem Icon="{iconPacks:Material Kind=Web}" Label="Internet Ranking">

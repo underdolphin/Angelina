@@ -12,31 +12,28 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
+using ReactiveUI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Reactive;
+using System.Reactive.Linq;
+using Angelina;
 
-namespace Angelina.Settings.View
+namespace Angelina.Settings.ViewModel
 {
-    /// <summary>
-    /// VideoSettingView.xaml の相互作用ロジック
-    /// </summary>
-    public partial class ResourcesSettingView : UserControl
+    public class HomeViewModel : ReactiveObject
     {
-        public ResourcesSettingView()
+        public HomeViewModel()
         {
-            InitializeComponent();
+            StartCommand = ReactiveCommand
+                .CreateFromObservable(ExecuteStartCommand);
+        }
+
+        public ReactiveCommand<Unit, Unit> StartCommand { get; set; }
+
+        private IObservable<Unit> ExecuteStartCommand()
+        {
+            Program.Entry();
+            return Observable.Return(Unit.Default);
         }
     }
 }

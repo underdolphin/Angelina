@@ -12,44 +12,44 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
+using Angelina.Settings.ViewModel;
+using ReactiveUI;
 using System.Reactive.Disposables;
 using System.Windows;
 using System.Windows.Controls;
-using Angelina.Settings.ViewModel;
-using ReactiveUI;
 
 namespace Angelina.Settings.View
 {
     /// <summary>
     /// VideoSettingView.xaml の相互作用ロジック
     /// </summary>
-    public partial class HomeView : UserControl, IViewFor<HomeViewModel>
+    public partial class ResourcesSettingsView : UserControl, IViewFor<ResourceSettingsViewModel>
     {
         public static readonly DependencyProperty ViewModelProperty =
-            DependencyProperty.Register(nameof(ViewModel), typeof(HomeViewModel), typeof(HomeView));
+            DependencyProperty.Register(nameof(ViewModel), typeof(ResourceSettingsViewModel), typeof(ResourcesSettingsView));
 
-        public HomeView()
+        public ResourcesSettingsView()
         {
             InitializeComponent();
-            ViewModel = new HomeViewModel();
+            ViewModel = new ResourceSettingsViewModel();
 
             this.WhenActivated(disposable =>
             {
-                this.BindCommand(ViewModel, x => x.StartCommand, x => x.StartButton)
+                this.BindCommand(ViewModel, x => x.AddCommand, x => x.AddButton)
                     .DisposeWith(disposable);
             });
         }
 
-        public HomeViewModel ViewModel
+        public ResourceSettingsViewModel ViewModel
         {
-            get => (HomeViewModel)GetValue(ViewModelProperty);
+            get => (ResourceSettingsViewModel)GetValue(ViewModelProperty);
             set => SetValue(ViewModelProperty, value);
         }
 
         object IViewFor.ViewModel
         {
             get => ViewModel;
-            set => ViewModel = (HomeViewModel)value;
+            set => ViewModel = (ResourceSettingsViewModel)value;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Angelina.Settings.View.ResourcesSettingView"
+﻿<UserControl x:Class="Angelina.Settings.View.ResourcesSettingsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -14,7 +14,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <iconPacks:PackIconMaterial Kind="File" Margin="10px 10px 10px 10px" Foreground="White" Width="30px" Height="30px"/>
                 <TextBox Controls:TextBoxHelper.ClearTextButton="True" Width="500px" Margin="0px 10px 0px 10px" />
-                <Button Content="Added" Margin="10px 10px 10px 10px" />
+                <Button x:Name="AddButton" Content="Add" Margin="10px 10px 10px 10px" />
             </StackPanel>
             <DataGrid HorizontalAlignment="Center" AutoGenerateColumns="True" Style="{StaticResource AzureDataGrid}"></DataGrid>
         </StackPanel>
